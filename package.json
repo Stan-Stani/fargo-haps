@@ -1,0 +1,31 @@
+{
+  "name": "fargo-haps",
+  "version": "1.0.0",
+  "description": "Fargo event aggregator using Playwright",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "setup": "node node_modules/playwright/cli.js install chromium",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "scrape": "npm run build && npm run setup && node dist/index.js scrape",
+    "test": "jest",
+    "postinstall": "node node_modules/playwright/cli.js install chromium"
+  },
+  "keywords": ["fargo", "events", "scraper", "playwright"],
+  "author": "Stan Stanislaus",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "commander": "^11.0.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0"
+  }
+}
