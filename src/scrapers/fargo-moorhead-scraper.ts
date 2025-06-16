@@ -16,7 +16,7 @@ export class FargoMoorheadScraper extends BaseScraper {
     await this.navigateToPage();
     
     // Wait for page content to load
-    await this.page.waitForTimeout(3000);
+    await this.page.waitForTimeout(8000);
     
     console.log('Fargo-Moorhead page loaded, looking for events...');
     
